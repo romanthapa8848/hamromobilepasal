@@ -14,10 +14,7 @@
 /* Gallery Container Styles */
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
+  grid-template-columns: 1fr; /* Only one video per row */
   gap: 20px; /* Adds space between the videos */
   justify-items: center;
   align-items: center;
@@ -26,7 +23,7 @@
 .gallery-container video {
   width: 100%;
   height: auto;
-  max-width: 1000px; /* Maximum width for desktop */
+  max-width: 1000px; /* Maximum width for the video */
   border-radius: 20px; /* Curvy border radius */
   object-fit: cover; /* Ensures the video covers the container */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
@@ -41,10 +38,7 @@
 /* Responsive Design: Desktop */
 @media (min-width: 769px) {
   .gallery-container {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Three videos per row on large screens */
+    grid-template-columns: 1fr; /* One video per row on desktop as well */
   }
 
   .gallery-container video {
@@ -55,7 +49,7 @@
 /* Responsive Design: Mobile */
 @media (max-width: 768px) {
   .gallery-container {
-    grid-template-columns: 1fr; /* Only one video per row on smaller screens */
+    grid-template-columns: 1fr; /* One video per row on smaller screens */
   }
 
   .gallery-container video {
