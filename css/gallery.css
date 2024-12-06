@@ -1,0 +1,47 @@
+/* Gallery Section Styles */
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #000; /* Black background for a sleek look */
+  color: #fff; /* White text color */
+}
+
+.gallery-section h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds space between images */
+  justify-content: center;
+}
+
+.gallery-container img {
+  width: 100%; /* Make the image fill the container */
+  max-width: 200px; /* Restrict the maximum size */
+  aspect-ratio: 1 / 1; /* Ensures a perfect square */
+  object-fit: cover; /* Scales the image proportionally to fill the square */
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
+}
+
+.gallery-container img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-container img {
+    max-width: 150px; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container img {
+    max-width: 120px; /* Further adjust size for very small screens */
+  }
+}
