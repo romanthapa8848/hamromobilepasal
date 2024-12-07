@@ -12,3 +12,10 @@ function changeImage() {
 
 // Change image every 3 seconds
 setInterval(changeImage, 3000);
+
+// Disable right-click on all images in the hero gallery
+images.forEach((img) => {
+  img.addEventListener("contextmenu", (e) => {
+    e.preventDefault(); // Prevent right-click
+  });
+});
