@@ -1,6 +1,7 @@
 // Add sticky class when the page is scrolled
 window.onscroll = function () {
   addStickyClass();
+  closeMenuOnScroll(); // Close the mobile menu if scrolling
 };
 
 var header = document.querySelector("header");
@@ -27,3 +28,11 @@ document.querySelectorAll("nav ul li a").forEach((link) => {
     nav.classList.remove("active"); // Remove 'active' class to hide the menu
   });
 });
+
+// Close the mobile menu when scrolling
+function closeMenuOnScroll() {
+  var nav = document.querySelector("nav");
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active"); // Remove 'active' class to hide the menu
+  }
+}
