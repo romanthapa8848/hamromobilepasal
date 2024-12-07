@@ -19,3 +19,11 @@ function toggleMenu() {
   var nav = document.querySelector("nav");
   nav.classList.toggle("active");
 }
+
+// Close the mobile menu when a navigation link is clicked
+document.querySelectorAll("nav ul li a").forEach((link) => {
+  link.addEventListener("click", function () {
+    var nav = document.querySelector("nav");
+    nav.classList.remove("active"); // Remove 'active' class to hide the menu
+  });
+});
